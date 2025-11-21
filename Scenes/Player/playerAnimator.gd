@@ -19,7 +19,7 @@ func _process(delta: float) -> void:
 		sprite.flip_h = true
 	pass
 
-	if abs(playerController.velocity.x) > 1 and !isJumping:
+	if abs(playerController.velocity.x) > 0 and !isJumping:
 		animationPlayer.play("run")
 	else:
 		animationPlayer.play("idle")
