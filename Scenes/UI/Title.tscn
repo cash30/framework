@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://c0b3jc6wwwt4b"]
+[gd_scene load_steps=6 format=3 uid="uid://c0b3jc6wwwt4b"]
 
 [ext_resource type="Theme" uid="uid://yaj5a0o3nqh3" path="res://Themes/ButtonTheme.tres" id="1_ocyjd"]
+[ext_resource type="Script" uid="uid://cf0o6kw8e8ewt" path="res://Scripts/UI/Buttons/playButton.gd" id="2_b4gak"]
+[ext_resource type="Texture2D" uid="uid://c3dqfuxct7t4v" path="res://Art/player_files/player.png" id="2_blp2d"]
+[ext_resource type="Script" uid="uid://dakvhyalldgwu" path="res://Scripts/UI/Buttons/howButton.gd" id="3_iubqq"]
+[ext_resource type="PackedScene" uid="uid://cp32rfoo45xt" path="res://Scenes/UI/rotate.tscn" id="5_gyje7"]
 
 [node name="Control" type="Control"]
 layout_mode = 3
@@ -19,7 +23,24 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0.89724827, 0.43064514, 0.218927, 1)
 
-[node name="Button" type="Button" parent="."]
+[node name="Play" type="Button" parent="."]
+custom_minimum_size = Vector2(500, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.282
+anchor_top = 0.17283951
+anchor_right = 0.7161458
+anchor_bottom = 0.38700002
+offset_left = 0.13598633
+offset_bottom = 0.22395325
+grow_horizontal = 2
+grow_vertical = 0
+theme = ExtResource("1_ocyjd")
+text = "Play"
+script = ExtResource("2_b4gak")
+metadata/_edit_use_anchors_ = true
+
+[node name="how" type="Button" parent="."]
 custom_minimum_size = Vector2(500, 0)
 layout_mode = 1
 anchors_preset = -1
@@ -34,9 +55,12 @@ offset_bottom = -0.12005615
 grow_horizontal = 2
 grow_vertical = 0
 theme = ExtResource("1_ocyjd")
-text = "Play"
+text = "How?
+"
+script = ExtResource("3_iubqq")
 
-[node name="Button2" type="Button" parent="."]
+[node name="Settings (UNUSED)" type="Button" parent="."]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.135
@@ -52,19 +76,17 @@ grow_vertical = 2
 theme = ExtResource("1_ocyjd")
 text = "Settings"
 
-[node name="Button3" type="Button" parent="."]
-custom_minimum_size = Vector2(500, 0)
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.28300002
-anchor_top = 0.6
-anchor_right = 0.717
-anchor_bottom = 0.81500006
-offset_left = 271.98398
-offset_top = -244.80002
-offset_right = 272.016
-offset_bottom = -245.12009
-grow_horizontal = 2
-grow_vertical = 0
-theme = ExtResource("1_ocyjd")
-text = "How?"
+[node name="Player" type="Sprite2D" parent="."]
+position = Vector2(-470, 406.00003)
+scale = Vector2(16.34375, 18.0625)
+texture = ExtResource("2_blp2d")
+
+[node name="Node2D" parent="." instance=ExtResource("5_gyje7")]
+position = Vector2(174, 609)
+scale = Vector2(18.065, 18.065)
+
+[connection signal="mouse_entered" from="Play" to="Play" method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="Play" to="Play" method="_on_mouse_exited"]
+[connection signal="pressed" from="Play" to="Play" method="_on_pressed"]
+[connection signal="pressed" from="Play" to="Node2D" method="_on_play_pressed"]
+[connection signal="pressed" from="how" to="how" method="_on_pressed"]

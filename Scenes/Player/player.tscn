@@ -99,13 +99,17 @@ texture = ExtResource("3_xpcdj")
 region_enabled = true
 region_rect = Rect2(0, 32, 32, 32)
 
-[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-position = Vector2(-12, -14)
-scale = Vector2(0.6, 0.6)
-polygon = PackedVector2Array(14, 18, 16, 16, 17, 15, 17, 30, 18, 31, 18, 35, 23.333334, 29.999998, 23, 19, 23.333334, 18.333332, 25, 18.333332, 26, 12, 25, 11, 23, 11, 22, 10, 19, 10, 15, 12, 12, 15, 12, 17, 13, 18)
-
 [node name="Camera2D" type="Camera2D" parent="." node_paths=PackedStringArray("playerController")]
 scale = Vector2(0.1, 0.1)
 zoom = Vector2(10, 10)
 script = ExtResource("4_mtuoh")
 playerController = NodePath("..")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
+visible = false
+position = Vector2(-12, -14)
+scale = Vector2(0.6, 0.6)
+polygon = PackedVector2Array(14, 18, 16, 16, 17, 15, 17, 30, 18, 31, 18, 35, 23.333334, 29.999998, 23, 19, 23.333334, 18.333332, 25, 18.333332, 26, 12, 25, 11, 23, 11, 22, 10, 19, 10, 15, 12, 12, 15, 12, 17, 13, 18)
+
+[node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="."]
+polygon = PackedVector2Array(0, -9, -3, -8, -5, -6, -5, -5, -4, -4, -2, -6, -2, 7, 2, 7, 2, -4, 3, -4, 3, -8)
