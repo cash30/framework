@@ -10,7 +10,6 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	var currentRotation = rotation
 	if Globals.isHoveringOverPlay and abs(currentRotation) <= maxBackRotation:
-		print("hi yall")
 		rotate(-1 * delta)
 		
 	elif !Globals.isHoveringOverPlay and currentRotation <= 0:

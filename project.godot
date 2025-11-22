@@ -19,6 +19,8 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globals="*res://Scripts/Globals.gd"
+Music="*res://Scenes/Globals/music.gd"
+Clink="*res://Scripts/UI/sound/clink.gd"
 
 [display]
 
@@ -27,6 +29,10 @@ window/stretch/mode="viewport"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[global_group]
+
+player=""
 
 [input]
 
@@ -66,4 +72,4 @@ pause={
 textures/canvas_textures/default_texture_filter=0
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
-environment/defaults/default_clear_color=Color(0.1704942, 0.503718, 0.87017685, 1)
+environment/defaults/default_clear_color=Color(0.170494, 0.503718, 0.870177, 1)

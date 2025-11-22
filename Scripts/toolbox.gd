@@ -12,5 +12,11 @@ func _process(delta: float) -> void:
 
 
 func _on_area_2d_body_entered(body: Node2D) -> void:
-	print("u did it yay")
+	if body.is_in_group("player"):
+		$Timer.start()
+	pass # Replace with function body.
+
+
+func _on_timer_timeout() -> void:
+	Globals.nextLevel()
 	pass # Replace with function body.

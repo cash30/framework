@@ -13,4 +13,6 @@ func _process(delta: float) -> void:
 
 func _on_pressed() -> void:
 	Globals.changeScene(Globals.titleScene)
+	Globals.shouldClink = true
+	Globals.shouldMusicBePlaying = false
 	pass # Replace with function body.
