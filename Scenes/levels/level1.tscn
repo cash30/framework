@@ -195,6 +195,10 @@ text = "This is a toolbox, go into it to complete the level"
 
 [node name="nails" type="Node" parent="."]
 
+[node name="Node2D8" parent="nails" instance=ExtResource("4_udnv3")]
+position = Vector2(165, 3)
+scale = Vector2(0.49999997, 0.49999997)
+
 [node name="Node2D2" parent="nails" instance=ExtResource("4_udnv3")]
 position = Vector2(343, -29)
 scale = Vector2(0.49999997, 0.49999997)
@@ -219,14 +223,25 @@ scale = Vector2(0.49999997, 0.49999997)
 position = Vector2(340, -93)
 scale = Vector2(0.49999997, 0.49999997)
 
-[node name="Node2D" parent="." instance=ExtResource("4_udnv3")]
-position = Vector2(152, 3)
+[node name="Node2D9" parent="nails" instance=ExtResource("4_udnv3")]
+position = Vector2(178.99998, 2.9999943)
+scale = Vector2(0.49999997, 0.49999997)
 
-[node name="Node2D2" parent="." instance=ExtResource("4_udnv3")]
-position = Vector2(165, 3)
-
-[node name="Node2D3" parent="." instance=ExtResource("4_udnv3")]
-position = Vector2(179, 3)
-
-[node name="Node2D4" parent="." instance=ExtResource("4_udnv3")]
+[node name="Node2D10" parent="nails" instance=ExtResource("4_udnv3")]
 position = Vector2(127.000015, -205.00002)
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="Node2D7" parent="nails" instance=ExtResource("4_udnv3")]
+position = Vector2(152, 3)
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="explore2" type="Label" parent="."]
+z_index = -1
+offset_left = 300.0
+offset_top = -84.0
+offset_right = 1980.0
+offset_bottom = 231.0
+scale = Vector2(0.03, 0.03)
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 231
+text = "Nails are good!"
