@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cj431er0g23ck"]
+[gd_scene load_steps=8 format=3 uid="uid://cj431er0g23ck"]
 
 [ext_resource type="Texture2D" uid="uid://chgol7hunoese" path="res://Art/tiles/tiles.png" id="1_ygus0"]
 [ext_resource type="PackedScene" uid="uid://bpfmsgfwc3q2b" path="res://Scenes/Player/player.tscn" id="2_yriw2"]
 [ext_resource type="PackedScene" uid="uid://bv08kdu8uu2xx" path="res://Scenes/toolbox.tscn" id="3_j8gap"]
 [ext_resource type="Script" uid="uid://wavqdjomfqrh" path="res://Scripts/UI/Buttons/menuButton.gd" id="4_os33c"]
+[ext_resource type="PackedScene" uid="uid://cur3o0msomnfv" path="res://Scenes/nail.tscn" id="5_yriw2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kv6t8"]
 texture = ExtResource("1_ygus0")
@@ -203,5 +204,51 @@ scale = Vector2(0.1, 0.1)
 theme_override_font_sizes/font_size = 136
 text = "Main Menu"
 script = ExtResource("4_os33c")
+
+[node name="nails" type="Node2D" parent="."]
+
+[node name="Node2D2" parent="nails" instance=ExtResource("5_yriw2")]
+position = Vector2(280.00003, -94.00001)
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="Node2D7" parent="nails" instance=ExtResource("5_yriw2")]
+position = Vector2(304, -135)
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="Node2D11" parent="nails" instance=ExtResource("5_yriw2")]
+position = Vector2(295, -144)
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="Node2D10" parent="nails" instance=ExtResource("5_yriw2")]
+position = Vector2(303, -144)
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="Node2D9" parent="nails" instance=ExtResource("5_yriw2")]
+position = Vector2(312, -144)
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="Node2D8" parent="nails" instance=ExtResource("5_yriw2")]
+position = Vector2(295, -135)
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="Node2D6" parent="nails" instance=ExtResource("5_yriw2")]
+position = Vector2(312, -135)
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="Node2D5" parent="nails" instance=ExtResource("5_yriw2")]
+position = Vector2(295, -126)
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="Node2D3" parent="nails" instance=ExtResource("5_yriw2")]
+position = Vector2(312, -126)
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="Node2D4" parent="nails" instance=ExtResource("5_yriw2")]
+position = Vector2(304, -126)
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="Node2D" parent="nails" instance=ExtResource("5_yriw2")]
+position = Vector2(249, -61)
+scale = Vector2(0.49999997, 0.49999997)
 
 [connection signal="pressed" from="Button" to="Button" method="_on_pressed"]

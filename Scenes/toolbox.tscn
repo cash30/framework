@@ -33,6 +33,7 @@ z_index = -1
 texture = ExtResource("2_jieyh")
 
 [node name="OpenToolbox" type="Sprite2D" parent="StaticBody2D"]
+visible = false
 z_index = -1
 position = Vector2(0, -7.5)
 texture = ExtResource("3_t8fum")

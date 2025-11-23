@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://bduljtfdjf8ee"]
+[gd_scene load_steps=7 format=3 uid="uid://bduljtfdjf8ee"]
 
 [ext_resource type="Texture2D" uid="uid://chgol7hunoese" path="res://Art/tiles/tiles.png" id="1_w1m3h"]
 [ext_resource type="PackedScene" uid="uid://bpfmsgfwc3q2b" path="res://Scenes/Player/player.tscn" id="2_smh3g"]
 [ext_resource type="PackedScene" uid="uid://bv08kdu8uu2xx" path="res://Scenes/toolbox.tscn" id="3_w7nad"]
+[ext_resource type="PackedScene" uid="uid://cur3o0msomnfv" path="res://Scenes/nail.tscn" id="4_smh3g"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_eloyq"]
 texture = ExtResource("1_w1m3h")
@@ -180,7 +181,7 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 231
 text = "Onward!"
 
-[node name="explore2" type="Label" parent="."]
+[node name="end" type="Label" parent="."]
 z_index = 1
 offset_left = 942.0
 offset_top = -215.0
@@ -191,13 +192,208 @@ size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 231
 text = "Phew! you made it!"
 
-[node name="explore3" type="Label" parent="."]
+[node name="go down" type="Label" parent="."]
 z_index = -1
-offset_left = 1190.0
-offset_top = -123.99999
-offset_right = 3265.0
-offset_bottom = 191.0
+offset_left = 158.0
+offset_top = 30.0
+offset_right = 1838.0
+offset_bottom = 345.0
 scale = Vector2(0.03, 0.03)
 size_flags_horizontal = 4
 theme_override_font_sizes/font_size = 231
-text = "Made you look! "
+text = "Go down here"
+
+[node name="jump up" type="Label" parent="."]
+z_index = -1
+offset_left = 206.0
+offset_top = -1.9999981
+offset_right = 1886.0
+offset_bottom = 313.0
+scale = Vector2(0.03, 0.03)
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 231
+text = "then jump up"
+
+[node name="Nails" type="Node2D" parent="."]
+position = Vector2(1241, -93)
+rotation = 0.7853982
+scale = Vector2(0.49999997, 0.49999997)
+
+[node name="Node2D" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-1274.2065, 1622.1031)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D2" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-1286.9344, 1634.831)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D3" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-1299.6624, 1647.559)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D4" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-1303.905, 1555.635)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D5" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-1329.361, 1581.0908)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D7" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-1069.1455, 978.6359)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D8" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-1052.175, 961.66534)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D9" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-1033.7903, 943.2805)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D10" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-1015.40546, 924.8958)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D11" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-998.4349, 907.92523)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D13" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-1013.9912, 787.71704)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D14" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-998.43494, 772.16064)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D15" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-593.96985, 231.93103)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D16" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-234.75952, 234.75952)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D24" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-135.76453, 135.76453)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D36" parent="Nails" instance=ExtResource("4_smh3g")]
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D35" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-11.313721, 11.313721)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D34" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-22.627441, 22.627441)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D33" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-33.941162, 33.941162)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D32" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-45.25476, 45.25476)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D31" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-56.568604, 56.568604)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D30" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-67.882324, 67.882324)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D29" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-79.196045, 79.196045)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D28" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-90.509766, 90.509766)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D27" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-101.823364, 101.823364)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D26" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-113.137085, 113.137085)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D25" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-124.450806, 124.450806)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D21" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-171.11987, 171.11987)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D17" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-222.03174, 222.03174)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D23" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-147.07825, 147.07825)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D19" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-196.57568, 196.57568)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D20" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-183.84778, 183.84778)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D18" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-209.30371, 209.30371)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D22" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-158.39197, 158.39197)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D12" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-1028.1334, 801.85913)
+rotation = 0.0
+scale = Vector2(1, 1)
+
+[node name="Node2D6" parent="Nails" instance=ExtResource("4_smh3g")]
+position = Vector2(-1316.6329, 1568.3629)
+rotation = 0.0
+scale = Vector2(1, 1)

@@ -14,7 +14,7 @@ var shouldClink = false
 
 var isHoveringOverPlay = false
 var didStart = false
-
+var nailsCollected = 0
 
 func _ready() -> void:
 	

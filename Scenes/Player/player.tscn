@@ -1,10 +1,11 @@
-[gd_scene load_steps=11 format=3 uid="uid://bpfmsgfwc3q2b"]
+[gd_scene load_steps=12 format=3 uid="uid://bpfmsgfwc3q2b"]
 
 [ext_resource type="Script" uid="uid://bmedk7apojwu4" path="res://Scripts/Player/player.gd" id="1_a3d8c"]
 [ext_resource type="Script" uid="uid://knumqbmhvl4d" path="res://Scenes/Player/playerAnimator.gd" id="2_xpcdj"]
 [ext_resource type="Texture2D" uid="uid://bv0t707lcn0qy" path="res://Art/player_files/player full spritesheet.png" id="3_xpcdj"]
 [ext_resource type="Script" uid="uid://cqhkgj5hyx7ca" path="res://Scenes/Player/camera.gd" id="4_mtuoh"]
 [ext_resource type="Texture2D" uid="uid://b3locsbqy51lc" path="res://Art/sun.png" id="5_htcer"]
+[ext_resource type="Script" uid="uid://b16uws4c5ugc4" path="res://Scripts/Player/nailCounter.gd" id="6_dd0ac"]
 
 [sub_resource type="Animation" id="Animation_jlvik"]
 length = 0.001
@@ -121,3 +122,31 @@ z_index = -3
 position = Vector2(124.99999, -65)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("5_htcer")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = 11
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -141.00002
+offset_top = -77.99999
+offset_right = -138.88762
+offset_bottom = -77.26914
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(15.148697, 12.31447)
+color = Color(1, 1, 1, 0.29411766)
+
+[node name="Label" type="Label" parent="."]
+z_index = 12
+offset_left = -141.0
+offset_top = -78.0
+offset_right = 260.0
+offset_bottom = 40.0
+scale = Vector2(0.08, 0.08)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 86
+text = "Nails: 000"
+script = ExtResource("6_dd0ac")
